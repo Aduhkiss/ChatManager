@@ -37,6 +37,25 @@ Use /chat slow 0 to disable slow chat.
 
 Chat Manager has an easy to use API that allows you to control the plugin, from your own code. Here is how you use it!
 
+To get an instance of the api, simply use `ChatManagerAPI.getApi()` from this, you will be able to use the other methods given, to control the quickly.
+
+`isChatSilenced()` - Will return if the chat is currently silenced.
+
+`setChatSilenced()` - Takes a boolean as an argument, and will allow you to silence/un-silence the chat.
+
+`isChatSlowed()` - Returns if the chat is currenly slowed or not.
+
+`getChatCooldown()` - Returns the chat delay as a double. If the chat is not slowed it will return 0
+
+### Example use of the API
+
+```
+if(ChatManagerAPI.getApi().isChatSilenced()) {
+	ChatManagerAPI.getApi().setChatSilenced(true);
+	player.sendMessage("You have silenced the chat!");
+}
+```
+
 ## Credits
 
 * AtticusTheCoder (MrBeefSteak) = Started the plugin/Base code

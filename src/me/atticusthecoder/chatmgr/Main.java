@@ -6,6 +6,7 @@ import java.util.UUID;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.atticusthecoder.chatmgr.api.ChatManagerAPI;
 import me.atticusthecoder.chatmgr.cmd.ChatCommand;
 import me.atticusthecoder.chatmgr.common.MessageData;
 import me.atticusthecoder.chatmgr.listener.ChatListener;
