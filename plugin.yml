@@ -1,0 +1,7 @@
+name: ChatManager
+main: me.atticusthecoder.chatmgr.Main
+version: 1.0
+author: ["AtticusTheCoder"]
+commands:
+  chat:
+    description: Main command for this plugin
