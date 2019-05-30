@@ -43,7 +43,7 @@ To get an instance of the api, simply use `ChatManagerAPI.getApi()` from this, y
 
 `setChatSilenced()` - Takes a boolean as an argument, and will allow you to silence/un-silence the chat.
 
-`isChatSlowed()` - Returns if the chat is currenly slowed or not.
+`isChatSlowed()` - Returns if the chat is currently slowed or not.
 
 `getChatCooldown()` - Returns the chat delay as a double. If the chat is not slowed it will return 0
 
