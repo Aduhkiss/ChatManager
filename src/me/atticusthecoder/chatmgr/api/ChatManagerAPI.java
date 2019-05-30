@@ -1,6 +1,10 @@
 package me.atticusthecoder.chatmgr.api;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+
 import me.atticusthecoder.chatmgr.Main;
+import net.md_5.bungee.api.ChatColor;
 
 public class ChatManagerAPI {
 	/*
@@ -55,5 +59,20 @@ public class ChatManagerAPI {
 	 */
 	public double getChatCooldown() {
 		return Main.getInstance()._chatSlow;
+	}
+	
+	/***
+	 * Clears the chat, takes one argument, the clearer's name
+	 * @param clearerName
+	 */
+	public void clearChat(String clearerName) {
+		for(Player pl : Bukkit.getOnlinePlayers()) {
+			for(int i = 0; i < 200; i++) {
+				if(!pl.hasPermission("chatmanager.chatclearbypass")) {
+					pl.sendMessage("\n");
+				}
+			}
+			pl.sendMessage(ChatColor.RED + "The Chat was cleared by " + clearerName);
+		}
 	}
 }

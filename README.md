@@ -33,6 +33,10 @@ Use /chat slow 0 to disable slow chat.
 
 * 'chatmanager.bypasssilence' - Ability to talk when chat is silenced
 
+* 'chatmanager.chatclear' - Ability to clear the chat with /chat clear
+
+* 'chatmanager.chatclearbypass' - Bypass chat clears, when chat gets cleared, your chat will not get cleared.
+
 ## Chat Manager API
 
 Chat Manager has an easy to use API that allows you to control the plugin, from your own code. Here is how you use it!

@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import me.atticusthecoder.chatmgr.cmd.subcmds.ClearSubCommand;
 import me.atticusthecoder.chatmgr.cmd.subcmds.SilenceSubCommand;
 import me.atticusthecoder.chatmgr.cmd.subcmds.SlowSubCommand;
 import net.md_5.bungee.api.ChatColor;
@@ -13,10 +14,12 @@ public class ChatCommand implements CommandExecutor {
 	
 	private SilenceSubCommand silenceSubCommand;
 	private SlowSubCommand slowSubCommand;
+	private ClearSubCommand clearSubCommand;
 	
 	public ChatCommand() {
 		silenceSubCommand = new SilenceSubCommand();
 		slowSubCommand = new SlowSubCommand();
+		clearSubCommand = new ClearSubCommand();
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String str, String[] args) {
@@ -48,13 +51,17 @@ public class ChatCommand implements CommandExecutor {
 			slowSubCommand.execute((Player) sender, args);
 			return true;
 		}
+		if(args[0].equalsIgnoreCase("clear")) {
+			clearSubCommand.execute((Player) sender, args);
+			return true;
+		}
 		
 		sendHelp((Player) sender);
 		return true;
 	}
 	
 	public void sendHelp(Player player) {
-		player.sendMessage(ChatColor.RED + "Usage: /chat <silence, slow>");
+		player.sendMessage(ChatColor.RED + "Usage: /chat <silence, slow, clear>");
 	}
 
 }
