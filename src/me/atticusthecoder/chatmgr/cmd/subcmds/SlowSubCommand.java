@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 
 import me.atticusthecoder.chatmgr.Main;
 import me.atticusthecoder.chatmgr.cmd.SubCommand;
+import me.atticusthecoder.chatmgr.common.ChatLogger;
 import net.md_5.bungee.api.ChatColor;
 
 public class SlowSubCommand extends SubCommand {
@@ -30,6 +31,7 @@ public class SlowSubCommand extends SubCommand {
 				for(Player pl : Bukkit.getOnlinePlayers()) {
 					pl.sendMessage(ChatColor.GREEN + "Chat is no longer slowed.");
 				}
+				ChatLogger.log(caller.getName() + " has disabled slow chat.");
 				return;
 			}
 			
@@ -39,7 +41,7 @@ public class SlowSubCommand extends SubCommand {
 			for(Player pl : Bukkit.getOnlinePlayers()) {
 				pl.sendMessage(ChatColor.GREEN + caller.getName() + " has slowed the chat to " + cooldown + " seconds.");
 			}
-			
+			ChatLogger.log(caller.getName() + " has slowed the chat to " + cooldown + " seconds.");
 			return;
 		}
 	}

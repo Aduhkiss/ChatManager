@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import me.atticusthecoder.chatmgr.cmd.SubCommand;
+import me.atticusthecoder.chatmgr.common.ChatLogger;
 import net.md_5.bungee.api.ChatColor;
 
 public class ClearSubCommand extends SubCommand {
@@ -26,6 +27,8 @@ public class ClearSubCommand extends SubCommand {
 			}
 			pl.sendMessage(ChatColor.RED + "The Chat was cleared by " + caller.getName());
 		}
+		// log the action
+		ChatLogger.log(caller.getName() + " has cleared the chat.");
 		return;
 	}
 

@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 
 import me.atticusthecoder.chatmgr.Main;
 import me.atticusthecoder.chatmgr.cmd.SubCommand;
+import me.atticusthecoder.chatmgr.common.ChatLogger;
 import net.md_5.bungee.api.ChatColor;
 
 public class SilenceSubCommand extends SubCommand {
@@ -25,6 +26,7 @@ public class SilenceSubCommand extends SubCommand {
 			for(Player p : Bukkit.getOnlinePlayers()) {
 				p.sendMessage(ChatColor.GREEN + caller.getName() + " has un-silenced the chat.");
 			}
+			ChatLogger.log(caller.getName() + " has un-silenced the chat.");
 			return;
 		} else {
 			// Not
@@ -33,6 +35,7 @@ public class SilenceSubCommand extends SubCommand {
 			for(Player p : Bukkit.getOnlinePlayers()) {
 				p.sendMessage(ChatColor.GREEN + caller.getName() + " has silenced the chat.");
 			}
+			ChatLogger.log(caller.getName() + " has silenced the chat.");
 			return;
 		}
 	}

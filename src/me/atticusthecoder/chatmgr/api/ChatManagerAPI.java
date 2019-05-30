@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import me.atticusthecoder.chatmgr.Main;
+import me.atticusthecoder.chatmgr.common.ChatLogger;
 import net.md_5.bungee.api.ChatColor;
 
 public class ChatManagerAPI {
