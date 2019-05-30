@@ -56,6 +56,12 @@ if(ChatManagerAPI.getApi().isChatSilenced()) {
 }
 ```
 
+## Planned Features
+
+* Ability to clear chat
+
+* Logging of all staff commands
+
 ## Credits
 
 * AtticusTheCoder (MrBeefSteak) = Started the plugin/Base code
