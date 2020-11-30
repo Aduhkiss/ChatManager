@@ -68,4 +68,4 @@ if(ChatManagerAPI.getApi().isChatSilenced()) {
 
 ## Credits
 
-* AtticusTheCoder (MrBeefSteak) = Started the plugin/Base code
+* Atticus (Aduhkiss) = Started the plugin/Base code
