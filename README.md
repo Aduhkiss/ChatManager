@@ -1,6 +1,6 @@
 # Chat Manager
 
-Plugin by AtticusTheCoder
+Plugin by Aduhkiss
 
 ## What is it?
 
